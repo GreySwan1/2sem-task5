@@ -1,0 +1,30 @@
+﻿@model Role
+
+@{
+    ViewData["Title"] = "C";
+}
+
+<h1>Registration</h1>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Login (email)</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <br />
+        <label asp-for="Password" class="control-label">Password</label>
+        <input asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+        <br />
+        <label asp-for="FIO" class="control-label">FIO</label>
+        <input asp-for="FIO" class="form-control" />
+        <span asp-validation-for="FIO" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-outline-success" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back</a>
+</div>
